@@ -9,7 +9,7 @@ import { setupDesignCritiqueEvent } from "./services/designCritiqueEvent.service
 import { createServer } from "http";
 import { Server } from "socket.io";
 import cookieParser from "cookie-parser";
-import seed from "./scripts/script.js";
+// import seed from "./scripts/script.js";
 dotenv.config();
 const app = express();
 
@@ -53,7 +53,7 @@ io.on("connection", (socket) => {
 });
 
 connectToDB();
-seed();
+// seed();
 setupDesignCritiqueEvent();
 
 app.use("/auth", userRoutes);
